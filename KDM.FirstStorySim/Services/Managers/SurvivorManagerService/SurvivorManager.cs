@@ -1,7 +1,9 @@
-﻿using KDM.FirstStorySim.Model.Survivors;
+﻿using KDM.FirstStorySim.Model.Commands.SurvivorCommands;
+using KDM.FirstStorySim.Model.Survivors;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static KDM.FirstStorySim.Model.Commands.CommandEnums;
 using static KDM.FirstStorySim.Model.Enums;
 
 namespace KDM.FirstStorySim.Services.Managers.SurvivorManagerService
@@ -23,6 +25,10 @@ namespace KDM.FirstStorySim.Services.Managers.SurvivorManagerService
             }
         }
 
+        public void ExecuteCommandByIndex(int index, ISurvivorCommand command)
+        {
+            command.ExecuteAction(_survivors[index]);
+        }
 
         public void InitSurvivors()
         {

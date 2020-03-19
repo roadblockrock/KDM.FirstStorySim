@@ -31,18 +31,20 @@ namespace KDM.FirstStorySim.Services.Mechanical.DiceRollerService
 
             switch (result)
             {
-                case 1:
+                case 0:
                     return Enums.HitLocation.Head;
+                case 1:
+                    return Enums.HitLocation.Body;
                 case 2:
                     return Enums.HitLocation.Body; // double the chance of getting Body
                 case 3:
-                    return Enums.HitLocation.Body;
+                    return Enums.HitLocation.Arm;
                 case 4:
                     return Enums.HitLocation.Waist;
                 case 5:
                     return Enums.HitLocation.Leg;
                 default:
-                    throw new Exception("Unexpeced result from hit location dice roll");
+                    throw new Exception("Unexpected result from hit location dice roll");
             }
 
         }

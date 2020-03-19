@@ -12,5 +12,7 @@ namespace KDM.FirstStorySim.Model
 
         public enum HitLocation { Head, Body, Arm, Waist, Leg }
 
+
+
     }
 }
