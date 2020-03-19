@@ -31,5 +31,10 @@ namespace KDM.FirstStorySim.Model.Commands.SurvivorCommands
                 target.Survival = Math.Max(0, target.Survival - _amount);
             }
         }
+
+        public void Undo()
+        {
+            throw new NotImplementedException("TODO");
+        }
     }
 }

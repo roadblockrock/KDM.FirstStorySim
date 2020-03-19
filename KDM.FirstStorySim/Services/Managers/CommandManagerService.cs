@@ -13,7 +13,7 @@ namespace KDM.FirstStorySim.Services.Managers
 
     public class CommandManagerService: ICommandManagerService
     {
-        private readonly ISurvivorManager _survivorManager { get; set; }
+        private readonly ISurvivorManager _survivorManager;
 
         public void ExecuteCommand<T>(ICommand<T> command)
         {
